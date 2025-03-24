@@ -3,18 +3,21 @@
  * print_string - Function that print a string
  * @args: argument pointer
  */
-void print_string(va_list args)
+int print_string(va_list args)
 {
 	char *str = va_arg(args, char*);
+	int len = 0;
 
 	if (str != NULL)
 	{
-		while (*str != '\0')
+		while (str[len] != '\0')
 		{
-			_putchar(*str);
+			_putchar(str[len]);
 			str++;
+			len++;
 		}
-		_putchar('\n');
+		/* Return the lenght of the string */
+		return (len);
 	}
 	else if (str == NULL)
 	{
@@ -24,6 +27,8 @@ void print_string(va_list args)
 		_putchar('l');
 		_putchar('l');
 		_putchar(')');
-		_putchar('\n');
+		return (6);
 	}
+
+	return (0);
 }

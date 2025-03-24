@@ -21,10 +21,9 @@ int _printf(const char *format, ...)
 
 	while (format && format[i] != '\0')
 	{
-		if (i == '%')
-			i++;
-		else
+		if (format[i] == '%')
 		{
+			i++;
 			j = 0;
 			while (specifiers[j].type != NULL)
 			{
