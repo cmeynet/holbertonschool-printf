@@ -16,14 +16,13 @@
 typedef struct print
 {
 	char *type;
-	int (*f)(va_list);
+	void (*f)(va_list);
 } print_t;
 
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int print_char(va_list args);
-int print_string(va_list args);
-int print_percent(va_list args);
+void print_char(va_list args);
+void print_string(va_list args);
 
 #endif
