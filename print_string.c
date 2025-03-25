@@ -1,23 +1,19 @@
 #include "main.h"
 /**
  * print_string - Function that print a string
- * @args: argument pointer
+ * @args: variable argument
  */
-int print_string(va_list args)
+void print_string(va_list args)
 {
 	char *str = va_arg(args, char*);
-	int len = 0;
 
 	if (str != NULL)
 	{
-		while (str[len] != '\0')
+		while (*str != '\0')
 		{
-			_putchar(str[len]);
+			_putchar(str);
 			str++;
-			len++;
 		}
-		/* Return the lenght of the string */
-		return (len);
 	}
 	else if (str == NULL)
 	{
@@ -27,8 +23,5 @@ int print_string(va_list args)
 		_putchar('l');
 		_putchar('l');
 		_putchar(')');
-		return (6);
 	}
-
-	return (0);
 }
