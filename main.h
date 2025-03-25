@@ -24,5 +24,7 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 void print_char(va_list args);
 void print_string(va_list args);
+int print_number(va_list args);
+void print_number_rec(unsigned int num);
 
 #endif
