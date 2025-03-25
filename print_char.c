@@ -2,15 +2,14 @@
 #include "stdio.h"
 /**
  * print_char - fonction that print char charracter
- * 
+ * @args: variable arguments
  */
-int print_char(va_list args)
+void print_char(va_list args)
 {
-	int character = va_arg(args, int);
+	char character = va_arg(args, int);
 
 	if (character != 0)
 	{
 		_putchar(character);
 	}
-	return (1);
 }
