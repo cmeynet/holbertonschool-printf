@@ -15,11 +15,9 @@ int _printf(const char *format, ...)
 
 	va_list args;
 	unsigned int i = 0, j;
-	/* Count the number of characters printed
-	int count = 0; */
+	int count = 0;
 
 	va_start(args, format);
-
 	while (format && format[i] != '\0')
 	{
 		if (format[i] == '%')
@@ -27,18 +25,17 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == '%')
 			{
 				_putchar('%');
-				i = i + 2;
+				count++;
+				i += 2;
 				continue;
 			}
 			i++;
-
 			j = 0;
 			while (specifiers[j].type != NULL)
 			{
 				if (format[i] == *specifiers[j].type)
 				{
-					specifiers[j].f(args);
-
+					count += specifiers[j].f(args);
 					break;
 				}
 				j++;
@@ -46,13 +43,11 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			/* Display characters other than '%' */
 			_putchar(format[i]);
+			count++;
 		}
 		i++;
 	}
-
-	_putchar('\n');
 	va_end(args);
-	return (0);
+	return (count);
 }
