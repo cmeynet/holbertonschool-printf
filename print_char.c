@@ -10,6 +10,8 @@ int print_char(va_list args)
 
 	if (character != 0)
 	{
+		/*if (character == '%')
+			_putchar('%');*/
 		_putchar(character);
 	}
 	return (1);
