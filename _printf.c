@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "main.h"
-test
+
 /**
  * _printf - fonction that recodes the printf function
  * @format: list of types of arguments
