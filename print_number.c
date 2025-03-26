@@ -1,15 +1,18 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_number_rec - recursive function
- * @num: positive number
+ * print_number_rec - recursive functionS
+ * @param num: positive number
+ * @count: pointer for count of digit printrd
  */
-void print_number_rec(unsigned int num)
-	{
+void print_number_rec(unsigned int num, int *count)
+{
 	if (num / 10)
-		print_number_rec(num / 10);
-		_putchar((num % 10) + '0');
-	}
+		print_number_rec(num / 10, count);
+
+	_putchar((num % 10) + '0');
+	(*count)++;
+}
 /**
  * print_number - print an integer  
  * @args: variable arguments
@@ -31,10 +34,12 @@ int print_number(va_list args)
 		{
 		num = n;
 		}
-	if (num / 10)
-		print_number_rec(num);
-		_putchar((num% 10) + '0');
-		count++;
-	return(count);
-	}
+		if (num == 0)
+		{
+			_putchar('0');
+			return (1);
+		}
+		print_number_rec(num, &count);
 	
+		return (count);
+	}
