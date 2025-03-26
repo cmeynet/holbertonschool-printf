@@ -1,9 +1,8 @@
 #include "main.h"
-#include <stdio.h>
 /**
- * print_number_rec - recursive functionS
- * @param num: positive number
- * @count: pointer for count of digit printrd
+ * print_number_rec - recursive functionS to print
+ * @num: positive number to print
+ * @count: pointer for count of digit printed
  */
 void print_number_rec(unsigned int num, int *count)
 {
@@ -14,8 +13,8 @@ void print_number_rec(unsigned int num, int *count)
 	(*count)++;
 }
 /**
- * print_number - print an integer  
- * @args: variable arguments
+ * print_number - print an integer from variable arguments
+ * @args: variable arguments list contains integer
  * Return: number of char printed
  */
 int print_number(va_list args)
@@ -30,7 +29,7 @@ int print_number(va_list args)
 		count++;
 		num = -n;
 	}
-	else 
+	else
 	{
 		num = n;
 		if (num == 0)
@@ -38,6 +37,7 @@ int print_number(va_list args)
 			_putchar('0');
 			return (1);
 		}
+
 	}
 	print_number_rec(num, &count);
 	return (count);

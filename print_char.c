@@ -2,7 +2,8 @@
 #include "stdio.h"
 /**
  * print_char - fonction that print char charracter
- * @args: variable arguments
+ * @args: variable arguments list containing the char
+ * Return: number of char printed (1)
  */
 int print_char(va_list args)
 {
@@ -12,5 +13,5 @@ int print_char(va_list args)
 	{
 		_putchar(character);
 	}
-return (1);
+	return (1);
 }
