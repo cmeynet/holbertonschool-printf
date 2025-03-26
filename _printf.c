@@ -23,6 +23,8 @@ int _printf(const char *format, ...)
 	int index; /* Find if the specifier exist */
 
 	va_start(args, format);
+	if (format == NULL)
+		return (-1);
 	while (format && format[i] != '\0')
 	{
 		if (format[i] == '%')
