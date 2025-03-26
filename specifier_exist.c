@@ -10,14 +10,14 @@
  */
 int specifier_exist(print_t specifiers[], char spec)
 {
-        int i;
+	int i;
 
-        for (i = 0; specifiers[i].type != NULL; i++)
-        {
-                if (specifiers[i].type[0] == spec)
-                {
-                        return (i);
-                }
-        }
-        return (-1);
+	for (i = 0; specifiers[i].type != NULL; i++)
+	{
+		if (specifiers[i].type[0] == spec)
+		{
+			return (i);
+		}
+	}
+	return (-1);
 }
