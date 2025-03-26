@@ -10,6 +10,8 @@ int _printf(const char *format, ...)
 	print_t specifiers[] = {
 		{"c", print_char},
 		{"s", print_string},
+		{"d", print_number},
+		{"i", print_number},
 		{NULL, NULL}
 	};
 

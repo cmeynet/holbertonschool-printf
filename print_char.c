@@ -4,7 +4,7 @@
  * print_char - fonction that print char charracter
  * @args: variable arguments
  */
-void print_char(va_list args)
+int print_char(va_list args)
 {
 	char character = va_arg(args, int);
 
@@ -12,4 +12,5 @@ void print_char(va_list args)
 	{
 		_putchar(character);
 	}
+return (1);
 }

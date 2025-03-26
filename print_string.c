@@ -3,16 +3,17 @@
  * print_string - Function that print a string
  * @args: variable argument
  */
-void print_string(va_list args)
+int print_string(va_list args)
 {
 	char *str = va_arg(args, char*);
-
+	int count = 0;
 	if (str != NULL)
 	{
 		while (*str != '\0')
 		{
 			_putchar(*str);
 			str++;
+			count++;
 		}
 	}
 	else if (str == NULL)
@@ -23,5 +24,7 @@ void print_string(va_list args)
 		_putchar('l');
 		_putchar('l');
 		_putchar(')');
+		count = 6;
 	}
+	return (count);
 }

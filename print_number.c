@@ -25,21 +25,20 @@ int print_number(va_list args)
 	int count = 0;
 
 	if (n < 0)
-		{
+	{
 		_putchar('-');
 		count++;
 		num = -n;
-		}
+	}
 	else 
-		{
+	{
 		num = n;
-		}
 		if (num == 0)
 		{
 			_putchar('0');
 			return (1);
 		}
-		print_number_rec(num, &count);
-	
-		return (count);
+	}
+	print_number_rec(num, &count);
+	return (count);
 	}
