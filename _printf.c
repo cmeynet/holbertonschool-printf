@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 	int index; /* Find if the specifier exist */
 
 	va_start(args, format);
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	while (format && format[i] != '\0')
 	{
@@ -42,8 +42,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_putchar(format[i]);
-			count++;
+			count += _putchar(format[i]);
 		}
 		i++;
 	}
