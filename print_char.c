@@ -6,10 +6,12 @@
  */
 int print_char(va_list args)
 {
-	int character = va_arg(args, int);
+	char character = va_arg(args, int);
 
 	if (character != 0)
 	{
+		/*if (character == '%')
+			_putchar('%');*/
 		_putchar(character);
 	}
 	return (1);
