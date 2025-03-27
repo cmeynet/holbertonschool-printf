@@ -95,7 +95,7 @@ valgrind --leak-check=full --track-origins=yes ./printf
 ## Flowchart
 
 <div align="center">
-    <img src="/flowchart.jpg" width="300" height="650">
+    <img src="/flowchart.jpg" width="500" height="800">
 </div>
 
 ## Collaborators
