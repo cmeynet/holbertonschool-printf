@@ -95,7 +95,7 @@ valgrind --leak-check=full --track-origins=yes ./printf
 ## Flowchart
 
 <div align="center">
-    <img src="/home/pulon/holbertonschool-printf/flowchart.jpg" width="300" height="650" alt="flowchart">
+    <img src="/flowchart.jpg" width="300" height="650">
 </div>
 
 ## Collaborators
