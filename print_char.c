@@ -8,9 +8,7 @@ int print_char(va_list args)
 {
 	char character = va_arg(args, int);
 
-	if (character == 0)
-		return (2);
-	else if (character != 0)
+	if (character != 0)
 	{
 		_putchar(character);
 	}
