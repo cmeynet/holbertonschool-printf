@@ -80,27 +80,25 @@ Use `valgrind` to detect memory leaks:
 valgrind --leak-check=full --track-origins=yes ./printf
 ```
 
+**Expected Output:**
+```
+==589== HEAP SUMMARY:
+==589==     in use at exit: 0 bytes in 0 blocks
+==589==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==589==
+==589== All heap blocks were freed -- no leaks are possible
+==589==
+==589== For lists of detected and suppressed errors, rerun with: -s
+==589== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+```
+
 ## Flowchart
 
-Below is a simple flowchart of `_printf` execution:
-
-1. Start
-2. Parse the format string
-3. Identify format specifiers
-4. Call corresponding function to handle specifier
-5. Print output
-6. Return total printed characters
-7. End
-
-(You can create a visual representation using a tool like draw.io, Mermaid.js, or ASCII art.)
+<img >
 
 ## Collaborators
 
-- Julien PULON
-- Clémence MEYNET
+- [Julien PULON](https://github.com/JulienPul)
+- [Clémence MEYNET](https://github.com/cmeynet)
 
 ---
-
-This README provides an overview of the `_printf` function, including its usage, compilation, testing, and debugging methods.
-
-
