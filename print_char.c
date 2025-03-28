@@ -7,12 +7,7 @@
 int print_char(va_list args)
 {
 	char character = va_arg(args, int);
-
-	if (character == '\0')
-		return (1);
-	else if (character != 0)
-	{
-		_putchar(character);
-	}
+	
+	_putchar(character);
 	return (1);
 }
